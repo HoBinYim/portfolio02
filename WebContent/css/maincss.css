@@ -1,0 +1,465 @@
+@charset "EUC-KR";
+body{
+   width: 1900px;
+   margin: 0px auto;
+}
+input[type=text]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #2d9fd9;
+     color: #a0d18c;
+     width: 250px;
+     height: 30px;
+     padding-left: 10px;
+    }
+    input:focus {outline:none;}
+    
+h1{
+   text-align:center;
+   font-size:50px;
+   color:#417556;
+}
+header{
+   text-align:center;
+   width:1900px;
+}
+
+.mainlogin{
+   text-align:right;
+   font-size:15px;
+}
+.paging a{
+	text-decoration:none;
+}
+header h1{
+   text-align: center;
+   font-size:50px;
+   color:#8b8945;
+}
+/********************************************************메뉴바 관련**/
+nav{
+   
+   background-color: white;
+   z-index:90;
+  
+
+}
+
+.menubarfix{
+    position:-webkit-sticky;
+    position:sticky;
+    top:0px;
+    height:60px;
+}
+
+
+nav li{
+
+   list-style-type:none;
+   display: inline;
+   margin-left:150px;
+   
+   
+}
+
+nav li a{
+
+ text-decoration: none;
+ color:black;
+ font-weight:bold;
+}
+   /****************************************메인 페이지 이미지 관련**/ 
+.mainlogo{
+   text-align:center;
+   width:200px;
+   height:120px;
+   margin-right:850px;
+   margin: 0px auto;
+   
+   
+}
+/****************************메인 슬라이드 시작********/
+.sliding input[id*="slide"]{
+   display:none;
+}
+.sliding .slidewrap{
+   max-width:1900px;
+   margin:0 auto;
+   overflow:hidden;
+}
+.sliding .slidelist{
+   font-size:0;
+   white-space:nowrap;
+}
+.sliding .slidelist > li {
+   display:inline-block;
+   vertical-align:middle;
+   width:100%;
+   transition:all .5s;
+}
+.sliding .slidelist >li >a{
+   display:block;
+   position:relative;
+}
+.sliding .slidelist >li > a img {
+   width:100%;
+}
+.sliding .slidelist label{
+   position:absolute;
+   z-index:10;
+   top:50%;
+   transform:translateY(-50%);
+   padding:50px;
+   cursor:pointer;
+}
+.sliding .slidelist .left{
+   opacity:50%;
+   left:30px;
+   background:url('../img/left.png') center center / 100% no-repeat;
+}
+.sliding .slidelist .right{
+   opacity:50%;
+   right:30px;
+   background:url('../img/right.png') center center / 100% no-repeat;
+}
+.sliding [id="slide01"]:checked ~ .slidewrap .slidelist > li{
+   transform:translateX(0%);
+}
+.sliding [id="slide02"]:checked ~ .slidewrap .slidelist > li{
+   transform:translateX(-100%);
+}
+.sliding [id="slide03"]:checked ~ .slidewrap .slidelist > li{
+   transform:translateX(-200%);
+}
+/****************************메인 슬라이드 끝********/
+
+section{
+   width: 1900px;
+}
+.mainImg{
+   margin-top:50px;
+}
+.main_imglist{
+    
+
+border-radius: 15px;
+-moz-border-radius: 15px;
+-khtml-border-radius: 15px;
+-webkit-border-radius: 15px;
+
+    
+}
+.mainimgfloat{
+   
+   float:left;
+   width:400px;
+   height:200px;
+   line-height:200px;
+   text-align:center;
+   display:inline;
+}
+.mainimgfloat_1{
+   width:160px;
+   heignt:210px;
+}
+
+
+.imgtable{
+   text-align:center;
+   margin:0px auto;
+   border-spacing:80px 20px;
+}
+/**********************************************************footer**/
+footer{
+width:1900px;
+clear:both;
+margin-bottom:50px;
+
+}
+footer div{
+   text-align:center;
+}
+footer table{
+   text-align: center;
+   margin: 0px auto;
+}
+footer th{
+   background-color: #818181;
+}
+footer p{
+   background-color: #818181;
+   border-top: 3px double #818181;
+   border-bottom: 3px double #818181;
+   color:#8B4F1D;
+}
+#footer_info{
+   color:#818181;
+   font-size: 10px;
+}
+footer a{
+   text-decoration: none;
+}
+footer h3{
+   color:#818181;
+}
+#info1{
+   font-size: 10px;
+}
+#footer_logo{
+   width:70px;
+}
+/**/
+
+
+
+
+/************************************************************************사이드바*/
+
+body input[id="menuicon"] {
+   display:none;   /* checkbox 안보이게하기 */
+}
+body input[id="menuicon"] + label {
+   display:block;
+   width:40px;
+   height:30px;
+   position:fixed;    /*fixed화면고정*/ 
+   left:15px;
+   top:7px;
+   transition:all .35s;   /*움직이는 속도, 부드러운 움직임을 위해*/
+   cursor:pointer;
+   z-index:1000;
+}
+body input[id="menuicon"] + label span {
+   display:block;
+   position:absolute;
+   width:100%;
+   height:5px;
+   border-radius:30px;    /*둥근테두리 속성*/
+   background:#000000;
+   transition:all .35s; 
+   z-index:1001;  
+}
+body input[id="menuicon"] + label span:nth-child(1) { /*nth-child span이 3개라서 순차적으로 선택하기 위함*/
+   top:0;
+}
+body input[id="menuicon"] + label span:nth-child(2) {
+   top:50%;
+   margin-top:-2.5px; /*top50%는 가운데가 아니라서 -2.5*/
+}
+body input[id="menuicon"] + label span:nth-child(3) {
+   bottom:0;
+}
+
+
+body input[id="menuicon"]:checked + label span:nth-child(1) { /*check가 되었을때*/
+   top:50%;
+   transform:translateY(-50%) rotate(45deg); /*translateY y축 이동*//*rotate 회전*/
+}
+body input[id="menuicon"]:checked + label span:nth-child(2) {
+   opacity:0; /*투명도*/
+}
+body input[id="menuicon"]:checked + label span:nth-child(3) {
+   bottom:50%;
+   transform:translateY(50%) rotate(-45deg);
+}
+.sidebar{
+   width:400px;
+   height:100%;
+   background:#222;
+   position:fixed;
+   top:0;
+   left:-400px;
+   z-index:99;   /*position의 우선 순위*/
+   transition:all .35s;
+   opacity:90%;
+   color:white;
+}
+.sidebar li {
+   display:block;
+   width:200px;
+   height:83px;
+   list-style:none;
+   font-size:20px;
+   
+}
+.sidebar li a {
+   text-decoration: none;
+   color:#808080;
+}
+.sidebar li:hover a {
+   color:skyblue;
+   color:#222;
+}
+.sidebackground {
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   background:rgba(0,0,0,.3);
+   transition:all .35s;
+   opacity:0;
+   visibility:hidden;
+   z-index:98;
+}
+body input[id="menuicon"]:checked + label + div {
+   left:0;   /*-300인 위치에 사이드바를 0으로 가져오기*/
+   background:#ffffff;
+}
+body input[id="menuicon"]:checked ~ .sidebackground {
+   opacity:1;
+   visibility:visible;
+}
+/*********************************************************************************/
+.bestProductPage_img1 img{
+   -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1); 
+    -o-transform:scale(1);  
+    transform:scale(1);
+    -webkit-transition:.3s;
+    -moz-transition:.3s;
+    -ms-transition:.3s;
+    -o-transition:.3s;
+    transition:.3s;
+}
+.bestProductPage_img1:hover img {
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -ms-transform:scale(1.2);   
+    -o-transform:scale(1.2);
+    transform:scale(1.2);
+   /* box-shadow: 5px 5px 5px #000;*/
+}
+
+/*.bestProductPage_img1 { overflow: hidden; }*/
+/*******************상품 리스트 css 시작*************************/
+.productList{
+   margin:193px;
+   margin-top:50px;
+}
+.productList img{
+   margin:50px;
+}
+/*********************************/
+.dropbtn {
+    color: #222;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width:80px;
+    background-color: #89cf72;
+}
+.dropdown {
+   float:right;
+    position: relative;
+    display: inline-block;
+    margin:20px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 16px;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+	transition:all .5s;
+    background-color: #3e8e41;
+}
+
+.scrollToTop{
+
+position:fixed;
+bottom:200px;
+right:200px;
+
+}
+
+
+
+/*******************상품 리스트 css 끝*************************/
+/****************************메인 슬라이드 시작********/
+.sliding input[id*="slide"]{
+   display:none;
+}
+.sliding .slidewrap{
+   max-width:1900px;
+   margin:0 auto;
+   overflow:hidden;
+}
+.sliding .slidelist{
+   font-size:0;
+   white-space:nowrap;
+}
+.slidewrap > ul {
+   padding: 0px;
+}
+.sliding .slidelist > li {
+   display:inline-block;
+   vertical-align:middle;
+   width:100%;
+   transition:all .5s;
+}
+.sliding .slidelist >li >a{
+   display:block;
+   position:relative;
+}
+.sliding .slidelist >li > a img {
+   width:100%;
+}
+.sliding .slidelist label{
+   position:absolute;
+   z-index:10;
+   top:50%;
+   transform:translateY(-50%);
+   padding:50px;
+   cursor:pointer;
+}
+.sliding .slidelist .left{
+   opacity:50%;
+   left:30px;
+   background:url('../image/left.png') center center / 100% no-repeat;
+}
+.sliding .slidelist .right{
+   opacity:50%;
+   right:30px;
+   background:url('../image/right.png') center center / 100% no-repeat;
+}
+.sliding [id="slide01"]:checked ~ .slidewrap .slidelist > li{
+   transform:translateX(0%);
+}
+.sliding [id="slide02"]:checked ~ .slidewrap .slidelist > li{
+   transform:translateX(-100%);
+}
+.sliding [id="slide03"]:checked ~ .slidewrap .slidelist > li{
+   transform:translateX(-200%);
+}
+.btn{
+    background-color:#dcdcdc;
+        color:white;
+        width: 17%;
+        height: 45px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 6px;
+        border: 0;
+        outline: 0;
+        font-size:12px;
+
+}
+/****************************메인 슬라이드 끝********/
